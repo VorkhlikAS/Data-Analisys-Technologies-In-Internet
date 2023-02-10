@@ -1,17 +1,18 @@
 import math
-
+from tqdm.auto import tqdm
 import pandas as pd
-import json
-import numpy
 import os
 import time
 import vk
 import matplotlib.pyplot as plt
-from collections import Counter
+from pyvis.network import Network
+from time import sleep
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 from urllib.request import urlretrieve
 
+
+# https://habr.com/ru/company/leader-id/blog/477976/?ysclid=laid47cam4879450475
 
 def get_token():
     """Возвращает токен из текстового файла"""
@@ -22,7 +23,8 @@ def get_token():
     p_web_pg1 = str(lines[2].replace('\n', ''))
     p_web_pg2 = str(lines[3].replace('\n', ''))
     p_photo_page = str(lines[4].replace('\n', ''))
-    return p_token, p_version, p_web_pg1, p_web_pg2, p_photo_page
+    p_csv = str(lines[5].replace('\n', ''))
+    return p_token, p_version, p_web_pg1, p_web_pg2, p_photo_page, p_csv
 
 
 def get_api(p_token: str, p_version: str):
@@ -179,9 +181,88 @@ def load_photos(p_api, p_url: str):
         f'\nВ очереди было {counter_total} файлов. Из них удачно загружено {counter_total - broken_total} файлов, {broken_total} не удалось загрузить. Затрачено времени: {round(time_for_dw, 1)} сек.')
 
 
+def get_user_pairs(p_api, p_df):
+    friends = []
+    ids = p_df["id"].unique()
+    for user_id in tqdm(ids):
+        try:
+            cnt = 0
+            res = p_api.friends.get(user_id=user_id, count=10_000)
+            print(str(res['items']))
+            for line in res['items']:
+                for id in ids:
+                    if str(line) == str(id):
+                        if user_id == id:
+                            cnt += 1
+                        friends.append({'user_id': int(str(user_id)), 'friend_id': id})
+            if cnt == 0:
+                friends.append({'user_id': int(str(user_id)), 'friend_id': -1})
+            sleep(0.3)
+        except Exception as e:
+            print("Профиль пользователя приватный")
+            print(e)
+            sleep(0.3)
+        '''if res.get("error", None) is not None:
+            if res["error"]["error_msg"] == "This profile is private" or res["error"]["error_code"] == 30:
+                continue
+            
+            res = p_api.friends.get(user_id=user_id, count=10_000).json()
+            try:
+                friends[user_id] = res["response"]["items"]
+            except Exception as e:
+                print(e)
+                continue
+            sleep(0.3)
+            many_friend = []
+            for user_id, friends_list in tqdm(friends.items(), total=len(friends)):
+                for friend_id in friends_list:
+                    many_friend.append({"user_id": user_id, "friend_id": friend_id})'''
+    return friends
+
+
+def show_net(p_df, p_api, p_is_net):
+    df_friends = []
+    if p_is_net == str(1):
+        df_friends = pd.read_csv('net.csv')
+    else:
+        df_friends = get_user_pairs(p_api, p_df)
+        for i in range(len(df_friends)):
+            for j in range(len(df_friends)):
+                if i != j:
+                    if df_friends[i]['user_id'] == df_friends[j]['friend_id'] \
+                            and df_friends[i]['friend_id'] == df_friends[j]['user_id']:
+                        df_friends[j]['user_id'] = -1
+                        df_friends[j]['friend_id'] = -1
+
+        df_friends = pd.DataFrame(df_friends)
+        print(df_friends)
+        df_friends.to_csv("net.csv")
+
+    got_net = Network(height='750px',
+                      width='100%',
+                      bgcolor='#222222',
+                      font_color='white',
+                      notebook=True)
+    for user in tqdm(df_friends['user_id'].unique()):
+        got_net.add_node(str(user), title=str(user))
+        for i in df_friends.index:
+            if user != -1 and df_friends['user_id'][i] == user:
+                if df_friends['friend_id'][i]  != -1:
+                    got_net.add_node(str(df_friends['friend_id'][i]), title=str(df_friends['friend_id'][i]))
+                    got_net.add_edge(str(user), str(df_friends['friend_id'][i]))
+    neighbor_map = got_net.get_adj_list()
+
+    # добавить данные о соседях в узлы
+    for node in got_net.nodes:
+        node['title'] += ' Neighbors:<br>' + '<br>'.join(neighbor_map[node['id']])
+        node['value'] = len(neighbor_map[node['id']])
+
+    got_net.show('gameofthrones.html')
+
+
 if __name__ == '__main__':
     """Начальная подготовка"""
-    token, version, gr1, gr2, photo_url = get_token()
+    token, version, gr1, gr2, photo_url, is_net = get_token()
     api = get_api(token, version)
     print(str(token) + ' ' + str(version))
     df1 = get_vk_users(api, gr1)
@@ -270,10 +351,12 @@ if __name__ == '__main__':
     draw_cities(df1, gr1)
     draw_cities(df2, gr2)
     draw_cities(df, 'пересечение')
-    plt.show()
+    # plt.show()
 
     print('Ожидание ввода пользователя для начала загрузки ...')
-    input()
+    # input()
+    # load_photos(api, photo_url)
     print('Загрузка изображений ...')
-    load_photos(api, photo_url)
+    show_net(df, api, is_net)
+
     print('Finished process ...')

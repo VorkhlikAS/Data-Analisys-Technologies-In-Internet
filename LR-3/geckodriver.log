@@ -1,0 +1,101 @@
+1668359827614	geckodriver	INFO	Listening on 127.0.0.1:49291
+1668359830666	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49292" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofilekj0uk6"
+1668359831340	Marionette	INFO	Marionette enabled
+1668359831346	Marionette	INFO	Listening on port 49301
+WebDriver BiDi listening on ws://127.0.0.1:49292
+Read port: 49301
+1668359831625	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofilekj0uk6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49292/devtools/browser/02bb56d3-1b0a-4c13-acb8-9b54f93bc0a9
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4d91ef000 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:370
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4d91ef000 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://yastatic.net/vas-bundles/679458/bundles-es2017/loader.bundle.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to open media
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.kinopoisk.ru."
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4d3040100 Decode error: NS_ERROR_DOM_MEDIA_DEMUXER_ERR (0x806e000c): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4d3040100 Decode error: NS_ERROR_DOM_MEDIA_DEMUXER_ERR (0x806e000c): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4e2080a00 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:370
+[Child 13160, MediaDecoderStateMachine #1] WARNING: Decoder=1a4e2080a00 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+1668360800735	Marionette	INFO	Stopped listening on port 49301
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1668441277494	geckodriver	INFO	Listening on 127.0.0.1:53222
+1668441280527	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53223" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofile0GSjsl"
+1668441281418	Marionette	INFO	Marionette enabled
+1668441281425	Marionette	INFO	Listening on port 53232
+Read port: 53232
+WebDriver BiDi listening on ws://127.0.0.1:53223
+1668441281600	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofile0GSjsl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53223/devtools/browser/cc19e577-312f-4053-bcc3-40e3814b4e4f
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://yastatic.net/vas-bundles/678103/bundles-es2017/loader.bundle.js, line 1: This error message will be blank when privacy.resistFingerprinting = true.  If it is really necessary, please add it to the whitelist in MediaError::GetMessage: Failed to open media
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 8648, MediaDecoderStateMachine #2] WARNING: Decoder=1ec9aa27c00 Decode error: NS_ERROR_DOM_MEDIA_DEMUXER_ERR (0x806e000c): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+1668441617386	Marionette	INFO	Stopped listening on port 53232
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1668448102220	geckodriver	INFO	Listening on 127.0.0.1:62281
+1668448105178	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62282" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileyihU59"
+1668448106228	Marionette	INFO	Marionette enabled
+1668448106239	Marionette	INFO	Listening on port 62291
+Read port: 62291
+WebDriver BiDi listening on ws://127.0.0.1:62282
+1668448106490	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileyihU59\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62282/devtools/browser/b9b72f23-e7c9-4d6a-b873-18e75c85903d
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1668448471388	Marionette	INFO	Stopped listening on port 62291
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1668448490388	geckodriver	INFO	Listening on 127.0.0.1:63106
+1668448493445	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63107" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofile6sszI8"
+1668448494225	Marionette	INFO	Marionette enabled
+1668448494234	Marionette	INFO	Listening on port 63126
+Read port: 63126
+WebDriver BiDi listening on ws://127.0.0.1:63107
+1668448494423	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofile6sszI8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:63107/devtools/browser/fa400ca9-4557-476e-98a2-2dfe6b5a54cc
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.kinopoisk.ru."
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1668448939264	Marionette	INFO	Stopped listening on port 63126
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1668525932650	geckodriver	INFO	Listening on 127.0.0.1:61990
+1668525935715	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61991" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileNMts5R"
+1668525936416	Marionette	INFO	Marionette enabled
+1668525936424	Marionette	INFO	Listening on port 62000
+Read port: 62000
+WebDriver BiDi listening on ws://127.0.0.1:61991
+1668525936613	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileNMts5R\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:61991/devtools/browser/1c076266-1265-4987-8ec7-8e00a8397ed4
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.kinopoisk.ru."
+1668526040537	Marionette	INFO	Stopped listening on port 62000
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1668526411891	geckodriver	INFO	Listening on 127.0.0.1:62187
+1668526414943	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62188" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileK2woWU"
+1668526415353	Marionette	INFO	Marionette enabled
+1668526415358	Marionette	INFO	Listening on port 62198
+Read port: 62198
+WebDriver BiDi listening on ws://127.0.0.1:62188
+1668526415468	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alevo\\AppData\\Local\\Temp\\rust_mozprofileK2woWU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:62188/devtools/browser/9771a0ec-ddf6-4dd6-9430-29ce04764756
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Child 23764, MediaDecoderStateMachine #1] WARNING: Decoder=14c55770500 state=DECODING_METADATA Decode metadata failed, shutting down decoder: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:370
+[Child 23764, MediaDecoderStateMachine #1] WARNING: Decoder=14c55770500 Decode error: NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006): file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachineBase.cpp:151
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://st6.kp.yandex.net/js/vendors.js?v=e6da5e92fb4e7679000e8cb75997383c, line 5: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1668526627017	Marionette	INFO	Stopped listening on port 62198
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
